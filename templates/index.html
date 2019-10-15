@@ -1,0 +1,14 @@
+<h1>Weather in the City</h1>
+<h2>{{ city }}</h2>
+<table>
+    <tr>
+        <th>City</th>
+        <th>Condition</th>
+        <th>Temperature</th>
+    </tr>
+    <tr>
+        <td>{{ response.json()['name'] }}</td>
+        <td>{{ response.json()['weather'][0]['description'] }}</td>
+        <td>{{ response.json()['main']['temp']-273.15	}}</td>
+    </tr>
+</table>
